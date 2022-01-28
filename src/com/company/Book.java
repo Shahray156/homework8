@@ -28,12 +28,13 @@ package com.company;
             this.year = year;
         }
         public void setYear(int year) {
-            int currentYear = LocalDate.now(). getYear();
-            if (year < 1996 || year > currentYear) {
-                System.out.println("Invalide publishing year parametr: " + year);
-                return;
-            }
-            this.year = year;
+
+          //  int currentYear = LocalDate.now(). getYear();
+          //  if (year < 1996 || year > currentYear) {
+           //     System.out.println("Invalide publishing year parametr: " + year);
+           //     return;
+          //  }
+           // this.year = year;
         }
     }
 
