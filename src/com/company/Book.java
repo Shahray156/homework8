@@ -3,12 +3,12 @@ package com.company;
     import java.time.LocalDate;
 
     public class Book {
-        private String authorName;
+        private Author authorName;
         private int year;
         private final String bookName;
 
 
-        public Book (String authorName, int year, String bookName) {
+        public Book (Author authorName, int year, String bookName) {
             this.authorName = authorName;
             this.year = year;
             this.bookName = bookName;
