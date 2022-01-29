@@ -1,6 +1,8 @@
 package com.company;
 
-    public class Book {
+import java.util.Objects;
+
+public class Book {
         private Author authorName;
         private int year;
         private final String bookName;
@@ -37,7 +39,7 @@ package com.company;
         }
         @Override
         public int hashCode() {
-            return Object.hash(bookName);
+            return Objects.hash(bookName);
     }
         @Override
         public String toString() {

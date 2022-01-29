@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Author {
     public String authorName;
     public String authorFamile;
@@ -25,7 +27,7 @@ public class Author {
     }
     @Override
     public int hashCode() {
-        return Object.hash(authorFamile);
+        return Objects.hash(authorFamile);
     }
     @Override
     public String toString() {
