@@ -1,7 +1,5 @@
 package com.company;
 
-    import java.time.LocalDate;
-
     public class Book {
         private Author authorName;
         private int year;
@@ -28,13 +26,21 @@ package com.company;
             this.year = year;
         }
         public void setYear(int year) {
-
-          //  int currentYear = LocalDate.now(). getYear();
-          //  if (year < 1996 || year > currentYear) {
-           //     System.out.println("Invalide publishing year parametr: " + year);
-           //     return;
-          //  }
-           // this.year = year;
+        }
+        @Override
+        public boolean equals(Object other) {
+            if (this.getClass() != other.getClass()) {
+                return false;
+            }
+            Book palahniuk = (Book) other;
+            return bookName.equals(palahniuk.bookName);
+        }
+        @Override
+        public int hashCode() {
+            return Object.hash(bookName);
+    }
+        @Override
+        public String toString() {
+            return bookName + ":" + authorName;
         }
     }
-

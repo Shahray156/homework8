@@ -15,4 +15,20 @@ public class Author {
         public String getAuthorFamile() {
             return authorFamile;
         }
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Author lermontov = (Author) other;
+        return lermontov.equals(lermontov.authorFamile);
+    }
+    @Override
+    public int hashCode() {
+        return Object.hash(authorFamile);
+    }
+    @Override
+    public String toString() {
+        return authorFamile + authorName;
+    }
     }
