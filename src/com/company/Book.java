@@ -47,6 +47,6 @@ public class Book {
     }
     @Override
     public String toString() {
-        return bookName + Author.toString();
+        return bookName + ":" + Author.toString();
     }
 }
