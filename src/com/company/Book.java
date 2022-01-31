@@ -3,13 +3,14 @@ package com.company;
 import java.util.Objects;
 
 public class Book {
-    private Author authorName;
+    private Author author;
     private int year;
     private final String bookName;
+    private Object Author;
 
 
-    public Book(Author authorName, int year, String bookName) {
-        this.authorName = authorName;
+    public Book(Author author, int year, String bookName) {
+        this.author = author;
         this.year = year;
         this.bookName = bookName;
     }
@@ -18,8 +19,8 @@ public class Book {
         return bookName;
     }
 
-    public Object getAuthorName() {
-        return authorName;
+    public Object getAuthor() {
+        return Author;
     }
 
     public int getYear() {
@@ -46,6 +47,6 @@ public class Book {
     }
     @Override
     public String toString() {
-        return bookName + ":" + authorName;
+        return bookName + Author.toString();
     }
 }
